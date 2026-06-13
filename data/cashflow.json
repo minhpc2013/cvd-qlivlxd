@@ -1,1 +1,161 @@
-[]
+[
+    {
+        "type": "expense",
+        "amount": 1000000000,
+        "category": "Nhập kho",
+        "note": "Nhập kho Xi măng Hà Tiên PCB40 x100",
+        "id": "CFD193ECA9",
+        "created_at": "2026-06-05 14:50:52",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 1500,
+        "category": "Bán hàng",
+        "ref_id": "DHF60A9CB6",
+        "note": "Thu tiền ĐH#DHF60A9CB6 - Khách lẻ",
+        "id": "CF53EC17C1",
+        "created_at": "2026-06-05 15:04:07",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 18000,
+        "category": "Bán hàng",
+        "ref_id": "DH5A2BF729",
+        "note": "Thu tiền ĐH#DH5A2BF729 - Khách lẻ",
+        "id": "CFFA777C22",
+        "created_at": "2026-06-05 15:04:10",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 56500,
+        "category": "Bán hàng",
+        "ref_id": "DH34E6F116",
+        "note": "Thu tiền ĐH#DH34E6F116 - Khách lẻ",
+        "id": "CF69F77115",
+        "created_at": "2026-06-05 15:04:22",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 37000,
+        "category": "Bán hàng",
+        "ref_id": "DHFC58F336",
+        "note": "Thu tiền ĐH#DHFC58F336 - Khách lẻ",
+        "id": "CF39A87001",
+        "created_at": "2026-06-05 15:06:26",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 1350000,
+        "category": "Bán hàng",
+        "ref_id": "DH32A1834F",
+        "note": "Thu tiền ĐH#DH32A1834F - Nguyễn Văn An",
+        "id": "CF7DAF27F7",
+        "created_at": "2026-06-09 10:14:31",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 475000,
+        "category": "Bán hàng",
+        "ref_id": "DH5DCEB7E9",
+        "note": "Thu tiền ĐH#DH5DCEB7E9 - Nguyễn Văn An",
+        "id": "CFA0CB7AD3",
+        "created_at": "2026-06-09 10:14:44",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 785000,
+        "category": "Bán hàng",
+        "ref_id": "DH708B492F",
+        "note": "Thu tiền ĐH#DH708B492F - Khách lẻ",
+        "id": "CF8E878BF9",
+        "created_at": "2026-06-09 10:48:31",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 785000,
+        "category": "Bán hàng",
+        "ref_id": "DH75AE10D2",
+        "note": "Thu tiền ĐH#DH75AE10D2 - Khách lẻ",
+        "id": "CFB22C72C7",
+        "created_at": "2026-06-09 11:11:19",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 265000,
+        "category": "Bán hàng",
+        "ref_id": "DH24F4728A",
+        "note": "Thu tiền ĐH#DH24F4728A - Khách lẻ",
+        "id": "CF578A495E",
+        "created_at": "2026-06-09 11:13:03",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 220000,
+        "category": "Bán hàng",
+        "ref_id": "DHBEC9FEAE",
+        "note": "Thu tiền ĐH#DHBEC9FEAE - Khách lẻ",
+        "id": "CF32C204F1",
+        "created_at": "2026-06-09 11:13:12",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 110000,
+        "category": "Bán hàng",
+        "ref_id": "DH04F1821E",
+        "note": "Thu tiền ĐH#DH04F1821E - Khách lẻ",
+        "id": "CF683BF89C",
+        "created_at": "2026-06-09 11:16:48",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 37000,
+        "category": "Bán hàng",
+        "ref_id": "DH955822AF",
+        "note": "Thu tiền ĐH#DH955822AF - Khách lẻ",
+        "id": "CF2414EF52",
+        "created_at": "2026-06-09 14:09:08",
+        "user": "Nguyễn Quang Minh"
+    },
+    {
+        "type": "income",
+        "amount": 111500,
+        "category": "Bán hàng",
+        "ref_id": "DH05F217AA",
+        "note": "Thu tiền ĐH#DH05F217AA - Khách lẻ",
+        "id": "CFADAAC9F2",
+        "created_at": "2026-06-13 09:06:59",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 430000,
+        "category": "Bán hàng",
+        "ref_id": "DH85C3C648",
+        "note": "Thu tiền ĐH#DH85C3C648 - Khách lẻ",
+        "id": "CF9B0768B4",
+        "created_at": "2026-06-13 09:40:21",
+        "user": "Quản trị viên"
+    },
+    {
+        "type": "income",
+        "amount": 200000,
+        "category": "Bán hàng",
+        "ref_id": "DH766E0193",
+        "note": "Thu tiền ĐH#DH766E0193 - Khách lẻ",
+        "id": "CF18ACD70F",
+        "created_at": "2026-06-13 10:08:40",
+        "user": "Quản trị viên"
+    }
+]

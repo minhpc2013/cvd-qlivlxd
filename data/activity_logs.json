@@ -1,10 +1,434 @@
 [
     {
-        "id": "LOG9B6434FE",
+        "id": "LOGBBBB277A",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Xi măng Hà Tiên PCB40",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOG71AFE26F",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Xi măng INSEE PCB50",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGCEFF4357",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Gạch đặc 4x8x19",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGA3265218",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Gạch thẻ ốp lát 30x30",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGB6222CF1",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Thép D10 CB300-V",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOG572A84CE",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Thép D14 CB400-V",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGD90B44F2",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Sơn nội thất Dulux 18L",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGA6F92887",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Sơn chống thấm Kova 20kg",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOG4F5A8FD9",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Ống nhựa PVC D90",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGC97A669D",
+        "user": "Quản trị viên",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Cát xây 1m³",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGEF12A7A4",
+        "user": "Quản trị viên",
+        "action": "ADD_CUSTOMER",
+        "detail": "Thêm khách hàng: Nguyễn Văn An",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGDBACCFC5",
+        "user": "Quản trị viên",
+        "action": "ADD_CUSTOMER",
+        "detail": "Thêm khách hàng: Trần Thị Bình",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGD26CFE7B",
+        "user": "Quản trị viên",
+        "action": "ADD_CUSTOMER",
+        "detail": "Thêm khách hàng: Công ty XD Minh Phát",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOG1F9C9A71",
+        "user": "Quản trị viên",
+        "action": "ADD_SUPPLIER",
+        "detail": "Thêm nhà cung cấp: Công ty Xi măng Hà Tiên",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOG8B7C6373",
+        "user": "Quản trị viên",
+        "action": "ADD_SUPPLIER",
+        "detail": "Thêm nhà cung cấp: Nhà máy Thép Miền Nam",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "id": "LOGBBAF80DD",
+        "user": "Quản trị viên",
+        "action": "ADD_SUPPLIER",
+        "detail": "Thêm nhà cung cấp: Công ty xi măng ab",
+        "ip": "::1",
+        "created_at": "2026-06-05 14:49:05"
+    },
+    {
+        "id": "LOG34E83C65",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DHF60A9CB6 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-05 15:04:07"
+    },
+    {
+        "id": "LOG0C490239",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH5A2BF729 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-05 15:04:10"
+    },
+    {
+        "id": "LOG1806F433",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH34E6F116 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-05 15:04:22"
+    },
+    {
+        "id": "LOG6848522F",
+        "user": "Quản trị viên",
+        "action": "UPDATE_ORDER",
+        "detail": "Cập nhật trạng thái ĐH#DH34E6F116: delivered",
+        "ip": "::1",
+        "created_at": "2026-06-05 15:04:44"
+    },
+    {
+        "id": "LOG4757D61E",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DHFC58F336 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-05 15:06:26"
+    },
+    {
+        "id": "LOGD6FAE924",
+        "user": "Quản trị viên",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-05 16:33:08"
+    },
+    {
+        "id": "LOG7E1C0FB6",
         "user": "Quản trị viên",
         "action": "LOGIN",
         "detail": "Đăng nhập thành công",
         "ip": "::1",
-        "created_at": "2026-06-05 09:36:53"
+        "created_at": "2026-06-05 21:26:34"
+    },
+    {
+        "id": "LOG96EF2E00",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-09 08:29:52"
+    },
+    {
+        "id": "LOG7F5D3DA9",
+        "user": "Quản trị viên",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-09 09:24:01"
+    },
+    {
+        "id": "LOG37F4A84C",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-09 09:24:04"
+    },
+    {
+        "id": "LOGFF3EEC20",
+        "user": "Quản trị viên",
+        "action": "ADD_USER",
+        "detail": "Thêm tài khoản: Nguyễn Quang Minh (@minhpc) - quyền: staff",
+        "ip": "::1",
+        "created_at": "2026-06-09 09:55:13"
+    },
+    {
+        "id": "LOG8BC42303",
+        "user": "Quản trị viên",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-09 09:55:19"
+    },
+    {
+        "id": "LOG15736C7F",
+        "user": "Nguyễn Quang Minh",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-09 09:55:30"
+    },
+    {
+        "id": "LOG21B58C6E",
+        "user": "Nguyễn Quang Minh",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:08:33"
+    },
+    {
+        "id": "LOG1C24733F",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:08:36"
+    },
+    {
+        "id": "LOG4456C289",
+        "user": "Quản trị viên",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:09:19"
+    },
+    {
+        "id": "LOG1FB1B514",
+        "user": "Nguyễn Quang Minh",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:09:36"
+    },
+    {
+        "id": "LOG1A1A5344",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH32A1834F - KH: Nguyễn Văn An",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:14:31"
+    },
+    {
+        "id": "LOG93A8298C",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH5DCEB7E9 - KH: Nguyễn Văn An",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:14:44"
+    },
+    {
+        "id": "LOG4A3DD08C",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Xi  măng nhựa",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:16:01"
+    },
+    {
+        "id": "LOG2564101E",
+        "user": "Nguyễn Quang Minh",
+        "action": "DELETE_PRODUCT",
+        "detail": "Xoá sản phẩm: Xi  măng nhựa",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:16:36"
+    },
+    {
+        "id": "LOG2937D9F3",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_PRODUCT",
+        "detail": "Thêm sản phẩm: Xi  măng nhựa",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:17:07"
+    },
+    {
+        "id": "LOG2B0AFAD7",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH708B492F - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 10:48:31"
+    },
+    {
+        "id": "LOG93AA4109",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH75AE10D2 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 11:11:19"
+    },
+    {
+        "id": "LOGF4C059E8",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH24F4728A - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 11:13:03"
+    },
+    {
+        "id": "LOG7A6A6A08",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DHBEC9FEAE - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 11:13:12"
+    },
+    {
+        "id": "LOGB756A4F3",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH04F1821E - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 11:16:48"
+    },
+    {
+        "id": "LOG9BE5D547",
+        "user": "Nguyễn Quang Minh",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH955822AF - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-09 14:09:08"
+    },
+    {
+        "id": "LOG63D439E3",
+        "user": "Nguyễn Quang Minh",
+        "action": "UPDATE_ORDER",
+        "detail": "Cập nhật trạng thái ĐH#DH955822AF: cancelled",
+        "ip": "::1",
+        "created_at": "2026-06-09 14:38:19"
+    },
+    {
+        "id": "LOGDC8B1A93",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-10 15:25:20"
+    },
+    {
+        "id": "LOG8C78F09C",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-13 08:53:36"
+    },
+    {
+        "id": "LOG674C4A0E",
+        "user": "Quản trị viên",
+        "action": "LOGOUT",
+        "detail": "Đăng xuất",
+        "ip": "::1",
+        "created_at": "2026-06-13 08:53:58"
+    },
+    {
+        "id": "LOGB087D519",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-13 08:54:49"
+    },
+    {
+        "id": "LOG4A863119",
+        "user": "Quản trị viên",
+        "action": "DELETE_USER",
+        "detail": "Xóa tài khoản: Nguyễn Quang Minh",
+        "ip": "::1",
+        "created_at": "2026-06-13 08:55:01"
+    },
+    {
+        "id": "LOGA96C02F9",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH05F217AA - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-13 09:06:59"
+    },
+    {
+        "id": "LOG91F0F953",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH85C3C648 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-13 09:40:21"
+    },
+    {
+        "id": "LOG6887AA0E",
+        "user": "Quản trị viên",
+        "action": "LOGIN",
+        "detail": "Đăng nhập thành công",
+        "ip": "::1",
+        "created_at": "2026-06-13 09:41:24"
+    },
+    {
+        "id": "LOG7ACB25DB",
+        "user": "Quản trị viên",
+        "action": "ADD_ORDER",
+        "detail": "Tạo đơn hàng #DH766E0193 - KH: Khách lẻ",
+        "ip": "::1",
+        "created_at": "2026-06-13 10:08:40"
     }
 ]

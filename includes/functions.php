@@ -68,7 +68,7 @@ function getAllProducts(): array { return readJSON(PRODUCTS_FILE); }
 
 function getProductById(string $id): ?array {
     foreach (getAllProducts() as $p) {
-        if ($p['id'] === $id) return $p;
+        if (($p['id'] ?? '') === $id) return $p;
     }
     return null;
 }
@@ -89,11 +89,11 @@ function addProduct(array $data): array {
 function updateProduct(string $id, array $newData): bool {
     $products = getAllProducts();
     foreach ($products as &$p) {
-        if ($p['id'] === $id) {
+        if (($p['id'] ?? '') === $id) {
             $p = array_merge($p, $newData);
             $p['updated_at'] = date('Y-m-d H:i:s');
             writeJSON(PRODUCTS_FILE, $products);
-            logActivity('UPDATE_PRODUCT', "Cập nhật sản phẩm: {$p['name']}");
+            logActivity('UPDATE_PRODUCT', "Cập nhật sản phẩm: " . ($p['name'] ?? $id));
             return true;
         }
     }
@@ -102,7 +102,7 @@ function updateProduct(string $id, array $newData): bool {
 
 function deleteProduct(string $id): bool {
     $p = getProductById($id);
-    $products = array_values(array_filter(getAllProducts(), fn($x) => $x['id'] !== $id));
+    $products = array_values(array_filter(getAllProducts(), fn($x) => ($x['id'] ?? '') !== $id));
     writeJSON(PRODUCTS_FILE, $products);
     logActivity('DELETE_PRODUCT', "Xoá sản phẩm: " . ($p['name'] ?? $id));
     return true;
@@ -111,16 +111,15 @@ function deleteProduct(string $id): bool {
 function updateStock(string $id, int $qty, string $reason = ''): bool {
     $products = getAllProducts();
     foreach ($products as &$p) {
-        if ($p['id'] === $id) {
-            $before = $p['stock'];
-            $p['stock'] += $qty;
+        if (($p['id'] ?? '') === $id) {
+            $before      = intval($p['stock'] ?? 0);
+            $p['stock']  = $before + $qty;
             writeJSON(PRODUCTS_FILE, $products);
-            // Ghi log kho
             $logs   = readJSON(STOCK_LOGS_FILE);
             $logs[] = [
                 'id'         => generateId('KHO'),
                 'product_id' => $id,
-                'product'    => $p['name'],
+                'product'    => $p['name'] ?? '',
                 'before'     => $before,
                 'change'     => $qty,
                 'after'      => $p['stock'],
@@ -136,7 +135,7 @@ function updateStock(string $id, int $qty, string $reason = ''): bool {
 }
 
 function getLowStockProducts(int $threshold = 10): array {
-    return array_values(array_filter(getAllProducts(), fn($p) => $p['stock'] <= $threshold));
+    return array_values(array_filter(getAllProducts(), fn($p) => intval($p['stock'] ?? 0) <= $threshold));
 }
 
 // ── ĐƠN HÀNG ─────────────────────────────────────────────────
@@ -147,13 +146,17 @@ function addOrder(array $data): array {
     $data['id'] = generateId('DH');
     $data['created_at'] = date('Y-m-d H:i:s');
     $data['status']     = $data['status'] ?? 'pending';
-    $data['total']      = array_sum(array_map(fn($i) => $i['qty'] * $i['price'], $data['items']));
+    $data['total']      = array_sum(array_map(fn($i) => ($i['qty'] ?? 0) * ($i['price'] ?? 0), $data['items']));
     $data['paid']       = floatval($data['paid'] ?? 0);
-    $data['debt']       = $data['total'] - $data['paid'];
+    $data['debt']       = max(0, $data['total'] - $data['paid']);
 
     // Trừ tồn kho
     foreach ($data['items'] as $item) {
-        updateStock($item['product_id'], -intval($item['qty']), "Bán hàng ĐH#{$data['id']}");
+        // Tương thích cả key "product_id" lẫn "id", cả "qty" lẫn "quantity"
+        $pid = $item['product_id'] ?? $item['id'] ?? null;
+        $qty = intval($item['qty'] ?? $item['quantity'] ?? 0);
+        if (empty($pid) || $qty <= 0) continue;
+        updateStock($pid, -$qty, "Bán hàng ĐH#{$data['id']}");
     }
 
     // Ghi công nợ nếu còn nợ
@@ -188,7 +191,7 @@ function addOrder(array $data): array {
 function updateOrderStatus(string $id, string $status): bool {
     $orders = getAllOrders();
     foreach ($orders as &$o) {
-        if ($o['id'] === $id) {
+        if (($o['id'] ?? '') === $id) {
             $o['status']     = $status;
             $o['updated_at'] = date('Y-m-d H:i:s');
             writeJSON(ORDERS_FILE, $orders);
@@ -204,7 +207,7 @@ function getAllCustomers(): array { return readJSON(CUSTOMERS_FILE); }
 
 function getCustomerById(string $id): ?array {
     foreach (getAllCustomers() as $c) {
-        if ($c['id'] === $id) return $c;
+        if (($c['id'] ?? '') === $id) return $c;
     }
     return null;
 }
@@ -217,14 +220,14 @@ function addCustomer(array $data): array {
     $data['type']       = $data['type'] ?? 'retail';
     $customers[] = $data;
     writeJSON(CUSTOMERS_FILE, $customers);
-    logActivity('ADD_CUSTOMER', "Thêm khách hàng: {$data['name']}");
+    logActivity('ADD_CUSTOMER', "Thêm khách hàng: " . ($data['name'] ?? ''));
     return $data;
 }
 
 function updateCustomer(string $id, array $newData): bool {
     $customers = getAllCustomers();
     foreach ($customers as &$c) {
-        if ($c['id'] === $id) {
+        if (($c['id'] ?? '') === $id) {
             $c = array_merge($c, $newData);
             $c['updated_at'] = date('Y-m-d H:i:s');
             writeJSON(CUSTOMERS_FILE, $customers);
@@ -243,7 +246,7 @@ function addSupplier(array $data): array {
     $data['created_at'] = date('Y-m-d H:i:s');
     $suppliers[] = $data;
     writeJSON(SUPPLIERS_FILE, $suppliers);
-    logActivity('ADD_SUPPLIER', "Thêm nhà cung cấp: {$data['name']}");
+    logActivity('ADD_SUPPLIER', "Thêm nhà cung cấp: " . ($data['name'] ?? ''));
     return $data;
 }
 
@@ -264,10 +267,10 @@ function addDebt(array $data): array {
 function payDebt(string $id, float $amount): bool {
     $debts = getAllDebts();
     foreach ($debts as &$d) {
-        if ($d['id'] === $id) {
-            $d['paid_amount'] += $amount;
-            $d['status'] = $d['paid_amount'] >= $d['amount'] ? 'paid' : 'partial';
-            $d['paid_at'] = date('Y-m-d H:i:s');
+        if (($d['id'] ?? '') === $id) {
+            $d['paid_amount']  = floatval($d['paid_amount'] ?? 0) + $amount;
+            $d['status']       = $d['paid_amount'] >= floatval($d['amount'] ?? 0) ? 'paid' : 'partial';
+            $d['paid_at']      = date('Y-m-d H:i:s');
             writeJSON(DEBTS_FILE, $debts);
             logActivity('PAY_DEBT', "Thanh toán công nợ #{$id}: " . number_format($amount));
             return true;
@@ -279,11 +282,99 @@ function payDebt(string $id, float $amount): bool {
 function getTotalDebt(string $type = 'receivable'): float {
     $total = 0;
     foreach (getAllDebts() as $d) {
-        if ($d['type'] === $type && $d['status'] !== 'paid') {
-            $total += $d['amount'] - $d['paid_amount'];
+        if (($d['type'] ?? '') === $type && ($d['status'] ?? '') !== 'paid') {
+            $total += floatval($d['amount'] ?? 0) - floatval($d['paid_amount'] ?? 0);
         }
     }
     return $total;
+}
+
+function getDebtById(string $id): ?array {
+    foreach (getAllDebts() as $d) {
+        if (($d['id'] ?? '') === $id) return $d;
+    }
+    return null;
+}
+
+function updateDebt(string $id, array $newData): bool {
+    $debts = getAllDebts();
+    foreach ($debts as &$d) {
+        if (($d['id'] ?? '') === $id) {
+            $d = array_merge($d, $newData);
+            $d['updated_at'] = date('Y-m-d H:i:s');
+            writeJSON(DEBTS_FILE, $debts);
+            logActivity('UPDATE_DEBT', "Cập nhật công nợ #{$id}");
+            return true;
+        }
+    }
+    return false;
+}
+
+function deleteDebt(string $id): bool {
+    $debts = array_values(array_filter(getAllDebts(), fn($d) => ($d['id'] ?? '') !== $id));
+    writeJSON(DEBTS_FILE, $debts);
+    logActivity('DELETE_DEBT', "Xoá công nợ #{$id}");
+    return true;
+}
+
+function getDebtHistory(string $debtId): array {
+    $logs = readJSON(DEBT_HISTORY_FILE ?? (DATA_PATH . 'debt_history.json'));
+    return array_values(array_filter($logs, fn($l) => ($l['debt_id'] ?? '') === $debtId));
+}
+
+function addDebtHistory(string $debtId, float $amount, string $note = ''): void {
+    $file = DATA_PATH . 'debt_history.json';
+    $logs = file_exists($file) ? (json_decode(file_get_contents($file), true) ?? []) : [];
+    $logs[] = [
+        'id'         => generateId('DH'),
+        'debt_id'    => $debtId,
+        'amount'     => $amount,
+        'note'       => $note,
+        'user'       => $_SESSION['user_name'] ?? 'System',
+        'created_at' => date('Y-m-d H:i:s'),
+    ];
+    file_put_contents($file, json_encode($logs, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+}
+
+function getDebtStats(): array {
+    $debts = getAllDebts();
+    $stats = [
+        'total_recv'      => 0, 'total_pay'       => 0,
+        'overdue_recv'    => 0, 'overdue_pay'      => 0,
+        'count_unpaid'    => 0, 'count_partial'    => 0,
+        'count_paid'      => 0, 'count_overdue'    => 0,
+    ];
+    $today = date('Y-m-d');
+    foreach ($debts as $d) {
+        $type      = $d['type']   ?? 'receivable';
+        $status    = $d['status'] ?? 'unpaid';
+        $remaining = floatval($d['amount'] ?? 0) - floatval($d['paid_amount'] ?? 0);
+        $due       = $d['due_date'] ?? '';
+        $overdue   = !empty($due) && $status !== 'paid' && $due < $today;
+
+        if ($status !== 'paid') {
+            if ($type === 'receivable') $stats['total_recv'] += $remaining;
+            else                        $stats['total_pay']  += $remaining;
+            if ($overdue) {
+                $stats['count_overdue']++;
+                if ($type === 'receivable') $stats['overdue_recv'] += $remaining;
+                else                        $stats['overdue_pay']  += $remaining;
+            }
+        }
+        if ($status === 'unpaid')   $stats['count_unpaid']++;
+        elseif ($status === 'partial') $stats['count_partial']++;
+        elseif ($status === 'paid') $stats['count_paid']++;
+    }
+    return $stats;
+}
+
+function searchDebts(string $keyword): array {
+    $kw = mb_strtolower($keyword);
+    return array_values(array_filter(getAllDebts(), function($d) use ($kw) {
+        return str_contains(mb_strtolower($d['customer'] ?? ''), $kw)
+            || str_contains(mb_strtolower($d['note'] ?? ''), $kw)
+            || str_contains($d['id'] ?? '', strtoupper($kw));
+    }));
 }
 
 // ── DÒNG TIỀN ────────────────────────────────────────────────
@@ -302,7 +393,8 @@ function addCashFlow(array $data): array {
 function getCashBalance(): float {
     $balance = 0;
     foreach (getAllCashFlow() as $f) {
-        $balance += ($f['type'] === 'income') ? $f['amount'] : -$f['amount'];
+        $amount = floatval($f['amount'] ?? 0);
+        $balance += (($f['type'] ?? '') === 'income') ? $amount : -$amount;
     }
     return $balance;
 }
@@ -314,10 +406,10 @@ function getDashboardStats(): array {
     $customers = getAllCustomers();
     $today     = date('Y-m-d');
 
-    $todayOrders   = array_filter($orders, fn($o) => str_starts_with($o['created_at'], $today));
-    $todayRevenue  = array_sum(array_column(array_values($todayOrders), 'paid'));
-    $monthOrders   = array_filter($orders, fn($o) => str_starts_with($o['created_at'], date('Y-m')));
-    $monthRevenue  = array_sum(array_column(array_values($monthOrders), 'paid'));
+    $todayOrders   = array_filter($orders, fn($o) => str_starts_with($o['created_at'] ?? '', $today));
+    $todayRevenue  = array_sum(array_map(fn($o) => floatval($o['paid'] ?? $o['total'] ?? 0), array_values($todayOrders)));
+    $monthOrders   = array_filter($orders, fn($o) => str_starts_with($o['created_at'] ?? '', date('Y-m')));
+    $monthRevenue  = array_sum(array_map(fn($o) => floatval($o['paid'] ?? $o['total'] ?? 0), array_values($monthOrders)));
 
     return [
         'total_products'    => count($products),
@@ -336,9 +428,9 @@ function getDashboardStats(): array {
 function getRevenueByMonth(int $year): array {
     $data   = array_fill(1, 12, 0);
     foreach (getAllOrders() as $o) {
-        $m = (int) date('m', strtotime($o['created_at']));
-        $y = (int) date('Y', strtotime($o['created_at']));
-        if ($y === $year) $data[$m] += $o['paid'];
+        $m = (int) date('m', strtotime($o['created_at'] ?? 'now'));
+        $y = (int) date('Y', strtotime($o['created_at'] ?? 'now'));
+        if ($y === $year) $data[$m] += floatval($o['paid'] ?? $o['total'] ?? 0);
     }
     return $data;
 }
@@ -346,13 +438,14 @@ function getRevenueByMonth(int $year): array {
 function getTopProducts(int $limit = 5): array {
     $sales = [];
     foreach (getAllOrders() as $order) {
-        foreach ($order['items'] as $item) {
-            $pid = $item['product_id'];
+        foreach (($order['items'] ?? []) as $item) {
+            $pid = $item['product_id'] ?? ($item['id'] ?? '');
+            if (!$pid) continue;
             if (!isset($sales[$pid])) {
-                $sales[$pid] = ['name' => $item['name'], 'qty' => 0, 'revenue' => 0];
+                $sales[$pid] = ['name' => $item['name'] ?? '?', 'qty' => 0, 'revenue' => 0];
             }
-            $sales[$pid]['qty']     += $item['qty'];
-            $sales[$pid]['revenue'] += $item['qty'] * $item['price'];
+            $sales[$pid]['qty']     += intval($item['qty'] ?? 0);
+            $sales[$pid]['revenue'] += intval($item['qty'] ?? 0) * floatval($item['price'] ?? 0);
         }
     }
     uasort($sales, fn($a, $b) => $b['revenue'] <=> $a['revenue']);

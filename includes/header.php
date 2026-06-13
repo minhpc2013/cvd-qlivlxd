@@ -6,8 +6,10 @@
   <title><?= $pageTitle ?? 'VLXD Manager' ?> | <?= SITE_NAME ?></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Oxanium:wght@600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- LOCAL: Bootstrap CSS -->
+  <link href="<?= BASE_URL ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- LOCAL: Bootstrap Icons CSS -->
+  <link href="<?= BASE_URL ?>/assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -63,6 +65,9 @@
     </a>
     <a href="<?= BASE_URL ?>/pages/activity.php" class="nav-item <?= ($activePage??'')==='activity'?'active':'' ?>">
       <i class="bi bi-clock-history"></i> Nhật ký
+    </a>
+    <a href="<?= BASE_URL ?>/pages/settings.php" class="nav-item <?= ($activePage??'')==='settings'?'active':'' ?>">
+      <i class="bi bi-gear"></i> Cài đặt
     </a>
   </nav>
 

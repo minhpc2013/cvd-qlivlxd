@@ -1,1 +1,403 @@
-[]
+[
+    {
+        "customer_name": "Khách lẻ",
+        "customer_product_id": "",
+        "phone": "",
+        "items": [
+            {
+                "product_id": "SP0ABC7568",
+                "name": "Gạch đặc 4x8x19",
+                "price": 1500,
+                "qty": 1,
+                "stock": 5000
+            }
+        ],
+        "paproduct_id": 1500,
+        "note": "",
+        "product_id": "DHF60A9CB6",
+        "created_at": "2026-06-05 15:04:07",
+        "status": "pending",
+        "total": 1500,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_product_id": "",
+        "phone": "",
+        "items": [
+            {
+                "product_id": "SP98013DE2",
+                "name": "Thép D10 CB300-V",
+                "price": 18000,
+                "qty": 1,
+                "stock": 2000
+            }
+        ],
+        "paproduct_id": 18000,
+        "note": "",
+        "product_id": "DH5A2BF729",
+        "created_at": "2026-06-05 15:04:10",
+        "status": "pending",
+        "total": 18000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_product_id": "",
+        "phone": "",
+        "items": [
+            {
+                "product_id": "SPE7BFD2CA",
+                "name": "Thép D14 CB400-V",
+                "price": 19000,
+                "qty": 1,
+                "stock": 1500
+            },
+            {
+                "product_id": "SP98013DE2",
+                "name": "Thép D10 CB300-V",
+                "price": 18000,
+                "qty": 2,
+                "stock": 1999
+            },
+            {
+                "product_id": "SP0ABC7568",
+                "name": "Gạch đặc 4x8x19",
+                "price": 1500,
+                "qty": 1,
+                "stock": 4999
+            }
+        ],
+        "paproduct_id": 56500,
+        "note": "",
+        "product_id": "DH34E6F116",
+        "created_at": "2026-06-05 15:04:22",
+        "status": "delivered",
+        "total": 56500,
+        "debt": 0,
+        "updated_at": "2026-06-05 15:04:44"
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_product_id": "",
+        "phone": "",
+        "items": [
+            {
+                "product_id": "SP98013DE2",
+                "name": "Thép D10 CB300-V",
+                "price": 18000,
+                "qty": 1,
+                "stock": 1997
+            },
+            {
+                "product_id": "SPE7BFD2CA",
+                "name": "Thép D14 CB400-V",
+                "price": 19000,
+                "qty": 1,
+                "stock": 1499
+            }
+        ],
+        "paproduct_id": 37000,
+        "note": "",
+        "product_id": "DHFC58F336",
+        "created_at": "2026-06-05 15:06:26",
+        "status": "pending",
+        "total": 37000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Nguyễn Văn An",
+        "customer_id": "",
+        "phone": "0123456789",
+        "items": [
+            {
+                "id": "",
+                "name": "Sơn chống thấm Kova 20kg",
+                "price": 450000,
+                "qty": 3,
+                "stock": 8
+            }
+        ],
+        "paid": 1350000,
+        "note": "",
+        "id": "DH32A1834F",
+        "created_at": "2026-06-09 10:14:31",
+        "status": "pending",
+        "total": 1350000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Nguyễn Văn An",
+        "customer_id": "",
+        "phone": "0123456789",
+        "items": [
+            {
+                "id": "",
+                "name": "Xi măng Hà Tiên PCB40",
+                "price": 95000,
+                "qty": 5,
+                "stock": 300
+            }
+        ],
+        "paid": 475000,
+        "note": "",
+        "id": "DH5DCEB7E9",
+        "created_at": "2026-06-09 10:14:44",
+        "status": "pending",
+        "total": 475000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP22CEDFAC",
+                "name": "Cát xây 1m³",
+                "price": 220000,
+                "qty": 1,
+                "stock": 30
+            },
+            {
+                "id": "SP38755C77",
+                "name": "Ống nhựa PVC D90",
+                "price": 115000,
+                "qty": 1,
+                "stock": 120
+            },
+            {
+                "id": "SPC1A9861A",
+                "name": "Sơn chống thấm Kova 20kg",
+                "price": 450000,
+                "qty": 1,
+                "stock": 8
+            }
+        ],
+        "paid": 785000,
+        "note": "",
+        "id": "DH708B492F",
+        "created_at": "2026-06-09 10:48:31",
+        "status": "pending",
+        "total": 785000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP22CEDFAC",
+                "name": "Cát xây 1m³",
+                "price": 220000,
+                "qty": 1,
+                "stock": 30
+            },
+            {
+                "id": "SP38755C77",
+                "name": "Ống nhựa PVC D90",
+                "price": 115000,
+                "qty": 1,
+                "stock": 120
+            },
+            {
+                "id": "SPC1A9861A",
+                "name": "Sơn chống thấm Kova 20kg",
+                "price": 450000,
+                "qty": 1,
+                "stock": 8
+            }
+        ],
+        "paid": 785000,
+        "note": "",
+        "id": "DH75AE10D2",
+        "created_at": "2026-06-09 11:11:19",
+        "status": "pending",
+        "total": 785000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP38755C77",
+                "name": "Ống nhựa PVC D90",
+                "price": 115000,
+                "qty": 1,
+                "stock": 118
+            },
+            {
+                "id": "SP348889EE",
+                "name": "Xi  măng nhựa",
+                "price": 150000,
+                "qty": 1,
+                "stock": 190
+            }
+        ],
+        "paid": 265000,
+        "note": "",
+        "id": "DH24F4728A",
+        "created_at": "2026-06-09 11:13:03",
+        "status": "pending",
+        "total": 265000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP22CEDFAC",
+                "name": "Cát xây 1m³",
+                "price": 220000,
+                "qty": 1,
+                "stock": 28
+            }
+        ],
+        "paid": 220000,
+        "note": "",
+        "id": "DHBEC9FEAE",
+        "created_at": "2026-06-09 11:13:12",
+        "status": "pending",
+        "total": 220000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP609C5500",
+                "name": "Gạch thẻ ốp lát 30x30",
+                "price": 110000,
+                "qty": 1,
+                "stock": 300
+            }
+        ],
+        "paid": 110000,
+        "note": "",
+        "id": "DH04F1821E",
+        "created_at": "2026-06-09 11:16:48",
+        "status": "pending",
+        "total": 110000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SPE7BFD2CA",
+                "name": "Thép D14 CB400-V",
+                "price": 19000,
+                "qty": 1,
+                "stock": 1498
+            },
+            {
+                "id": "SP98013DE2",
+                "name": "Thép D10 CB300-V",
+                "price": 18000,
+                "qty": 1,
+                "stock": 1996
+            }
+        ],
+        "paid": 37000,
+        "note": "",
+        "id": "DH955822AF",
+        "created_at": "2026-06-09 14:09:08",
+        "status": "cancelled",
+        "total": 37000,
+        "debt": 0,
+        "updated_at": "2026-06-09 14:38:19"
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SP0ABC7568",
+                "name": "Gạch đặc 4x8x19",
+                "price": 1500,
+                "qty": 1,
+                "stock": 4998
+            },
+            {
+                "id": "SP609C5500",
+                "name": "Gạch thẻ ốp lát 30x30",
+                "price": 110000,
+                "qty": 1,
+                "stock": 299
+            }
+        ],
+        "paid": 111500,
+        "note": "",
+        "id": "DH05F217AA",
+        "created_at": "2026-06-13 09:06:59",
+        "status": "pending",
+        "total": 111500,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SPDD522B68",
+                "name": "Xi măng INSEE PCB50",
+                "price": 105000,
+                "qty": 2,
+                "stock": 150
+            },
+            {
+                "id": "SP22CEDFAC",
+                "name": "Cát xây 1m³",
+                "price": 220000,
+                "qty": 1,
+                "stock": 27
+            }
+        ],
+        "paid": 430000,
+        "note": "",
+        "id": "DH85C3C648",
+        "created_at": "2026-06-13 09:40:21",
+        "status": "pending",
+        "total": 430000,
+        "debt": 0
+    },
+    {
+        "customer_name": "Khách lẻ",
+        "customer_id": "",
+        "phone": "",
+        "items": [
+            {
+                "id": "SPB9E511C2",
+                "name": "Xi măng Hà Tiên PCB40",
+                "price": 95000,
+                "qty": 1,
+                "stock": 300
+            },
+            {
+                "id": "SPDD522B68",
+                "name": "Xi măng INSEE PCB50",
+                "price": 105000,
+                "qty": 1,
+                "stock": 148
+            }
+        ],
+        "paid": 200000,
+        "note": "",
+        "id": "DH766E0193",
+        "created_at": "2026-06-13 10:08:40",
+        "status": "pending",
+        "total": 200000,
+        "debt": 0
+    }
+]

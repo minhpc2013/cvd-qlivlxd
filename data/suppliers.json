@@ -1,1 +1,31 @@
-[]
+[
+    {
+        "name": "Công ty Xi măng Hà Tiên",
+        "phone": "0281111111",
+        "address": "Kiên Giang",
+        "category": "Xi măng",
+        "contact": "Anh Hùng",
+        "id": "NCCE79A099A",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "name": "Nhà máy Thép Miền Nam",
+        "phone": "0282222222",
+        "address": "Bình Dương",
+        "category": "Sắt thép",
+        "contact": "Chị Lan",
+        "id": "NCCDB5CFA3A",
+        "created_at": "2026-06-05 14:45:52"
+    },
+    {
+        "name": "Công ty xi măng ab",
+        "phone": "0123456789",
+        "address": "",
+        "email": "",
+        "category": "Xi măng",
+        "contact": "Nguyễn Quang Minh",
+        "note": "",
+        "id": "NCCD1DE8553",
+        "created_at": "2026-06-05 14:49:05"
+    }
+]

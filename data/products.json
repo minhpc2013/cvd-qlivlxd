@@ -1,1 +1,124 @@
-[]
+[
+    {
+        "name": "Xi măng Hà Tiên PCB40",
+        "category": "Xi măng",
+        "unit": "bao",
+        "price_buy": 88000,
+        "price_sell": 95000,
+        "stock": 299,
+        "id": "SPB9E511C2",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "XM-001"
+    },
+    {
+        "name": "Xi măng INSEE PCB50",
+        "category": "Xi măng",
+        "unit": "bao",
+        "price_buy": 95000,
+        "price_sell": 105000,
+        "stock": 147,
+        "id": "SPDD522B68",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "XM-002"
+    },
+    {
+        "name": "Gạch đặc 4x8x19",
+        "category": "Gạch",
+        "unit": "viên",
+        "price_buy": 1200,
+        "price_sell": 1500,
+        "stock": 4997,
+        "id": "SP0ABC7568",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "GACH-001"
+    },
+    {
+        "name": "Gạch thẻ ốp lát 30x30",
+        "category": "Gạch",
+        "unit": "m²",
+        "price_buy": 85000,
+        "price_sell": 110000,
+        "stock": 298,
+        "id": "SP609C5500",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "GACH-002"
+    },
+    {
+        "name": "Thép D10 CB300-V",
+        "category": "Sắt thép",
+        "unit": "kg",
+        "price_buy": 16500,
+        "price_sell": 18000,
+        "stock": 1995,
+        "id": "SP98013DE2",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "ST-001"
+    },
+    {
+        "name": "Thép D14 CB400-V",
+        "category": "Sắt thép",
+        "unit": "kg",
+        "price_buy": 17000,
+        "price_sell": 19000,
+        "stock": 1497,
+        "id": "SPE7BFD2CA",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "ST-002"
+    },
+    {
+        "name": "Sơn nội thất Dulux 18L",
+        "category": "Sơn",
+        "unit": "thùng",
+        "price_buy": 620000,
+        "price_sell": 720000,
+        "stock": 50,
+        "id": "SP6F5E009C",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "SON-001"
+    },
+    {
+        "name": "Sơn chống thấm Kova 20kg",
+        "category": "Sơn",
+        "unit": "thùng",
+        "price_buy": 380000,
+        "price_sell": 450000,
+        "stock": 6,
+        "id": "SPC1A9861A",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "SON-002"
+    },
+    {
+        "name": "Ống nhựa PVC D90",
+        "category": "Ống nước",
+        "unit": "cây",
+        "price_buy": 95000,
+        "price_sell": 115000,
+        "stock": 117,
+        "id": "SP38755C77",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "ON-001"
+    },
+    {
+        "name": "Cát xây 1m³",
+        "category": "Cát đá",
+        "unit": "m³",
+        "price_buy": 180000,
+        "price_sell": 220000,
+        "stock": 26,
+        "id": "SP22CEDFAC",
+        "created_at": "2026-06-05 14:45:52",
+        "sku": "CAT-001"
+    },
+    {
+        "name": "Xi  măng nhựa",
+        "category": "Xi măng",
+        "unit": "Bao",
+        "price_buy": 100000,
+        "price_sell": 150000,
+        "stock": 189,
+        "note": "",
+        "id": "SP348889EE",
+        "created_at": "2026-06-09 10:17:07",
+        "sku": "XM-003"
+    }
+]

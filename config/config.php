@@ -5,7 +5,7 @@
 define('SITE_NAME',      'VLXD Manager');
 define('VERSION',        '1.0.0');
 define('DATA_PATH',      __DIR__ . '/../data/');
-define('BASE_URL', '/store-management/');
+define('BASE_URL',       '/store-vlxd');
 
 // --- File paths ---
 define('PRODUCTS_FILE',   DATA_PATH . 'products.json');

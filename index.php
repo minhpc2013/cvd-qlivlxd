@@ -33,11 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập | VLXD Pro</title>
+  <title>Đăng nhập | VLXD Pro </title>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Oxanium:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="<?= BASE_URL ?>/assets/style.css" rel="stylesheet">
-  <link href="<?php echo BASE_URL; ?>assets/style.css" rel="stylesheet">
+  <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="login-page">

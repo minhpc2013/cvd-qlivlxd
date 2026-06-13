@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "name": "Nguyễn Văn An",
+        "phone": "0901234567",
+        "address": "123 Lê Lợi, Q1",
+        "type": "wholesale",
+        "id": "KHD25A0484",
+        "created_at": "2026-06-05 14:45:52",
+        "points": 0
+    },
+    {
+        "name": "Trần Thị Bình",
+        "phone": "0912345678",
+        "address": "45 Nguyễn Huệ, Q3",
+        "type": "retail",
+        "id": "KHF445EDA2",
+        "created_at": "2026-06-05 14:45:52",
+        "points": 0
+    },
+    {
+        "name": "Công ty XD Minh Phát",
+        "phone": "0283456789",
+        "address": "78 Đinh Tiên Hoàng, Bình Thạnh",
+        "type": "wholesale",
+        "id": "KH73F4A755",
+        "created_at": "2026-06-05 14:45:52",
+        "points": 0
+    }
+]

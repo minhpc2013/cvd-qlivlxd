@@ -1,8 +1,10 @@
-  </div><!-- /.content-area -->
+</div><!-- /.content-area -->
 </div><!-- /.main-content -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<!-- LOCAL: Bootstrap JS -->
+<script src="<?= BASE_URL ?>/assets/js/bootstrap.bundle.min.js"></script>
+<!-- LOCAL: Chart.js -->
+<script src="<?= BASE_URL ?>/assets/js/chart.umd.min.js"></script>
 <script src="<?= BASE_URL ?>/assets/js/main.js"></script>
 <?php if (!empty($extraJs)) echo $extraJs; ?>
 </body>
